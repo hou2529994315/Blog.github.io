@@ -9,6 +9,9 @@ npm run docs:build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
+# 删除不想上传的文件
+rm -rf Private
+
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 
@@ -18,8 +21,10 @@ git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
 git push -f git@github.com:hou2529994315/Blog.github.io.git master
+#git push -f git@github.com:hou2529994315/bolg.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 #git push -f git@github.com:hou2529994315/Blog.git master:gh-pages
 
 cd -
+
